@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginTop="6dp"
+    android:layout_marginRight="6dp"
+    android:layout_marginLeft="6dp"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/tv_title_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:text="周三吃货日"
+        android:textSize="16sp"
+        android:textColor="@color/txtBlack"/>
+    
+    <ImageView
+        android:id="@+id/iv_title_find"
+        android:layout_width="match_parent"
+        android:layout_height="165dp"
+        android:src="@mipmap/find_img1"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/tv_msg_find"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:text="立即查看"
+        android:textColor="@color/txtBlack"/>
+
+
+
+</LinearLayout>

@@ -1,0 +1,99 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "jju.example.com.xgg"
+        minSdkVersion 16
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions { annotationProcessorOptions { includeCompileClasspath = true } }
+        //解决错误1
+
+        multiDexEnabled true
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support:recyclerview-v7:26.1.0'
+    implementation 'com.android.support:cardview-v7:26.1.0'
+
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:support-v4:26.1.0'
+    implementation 'com.android.support:design:26.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'  // 实现Activity与Fragment通信的依赖库
+    implementation 'com.cjj.materialrefeshlayout:library:1.3.0' // 首页下拉刷新的依赖库
+    implementation 'com.youth.banner:banner:1.4.10'     // 首页广告栏依赖库
+    implementation 'com.google.code.gson:gson:2.8.0'    //Java对象和JSON数据之间进行映射的Java类库
+    implementation 'com.loopj.android:android-async-http:1.4.9' // 网络请求框架AsyncHttpClient
+    implementation 'cz.msebera.android:httpclient:4.4.1.1'
+
+    implementation 'com.github.bumptech.glide:glide:4.1.1'  // 图片加载库
+    //implementation 'com.github.bumptech.glide:glide:4.1.1'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.1.1'
+    implementation 'com.github.bumptech.glide:okhttp3-integration:4.1.1'
+
+    implementation 'com.github.zackratos.ultimatebar:ultimatebar2:2.0.0'    //透明状态栏导航栏、沉浸式状态栏导航栏
+    implementation 'com.gxz.pagerslidingtabstrip:library:1.3.1' //滑动tap
+    implementation 'com.longsh:OptionFrame:1.0.0'     //弹出框 选择上传
+    implementation 'com.sunfusheng:glideimageview:1.0.0' //基于Glide V4.0封装的GlideImageView，可监听加载图片时的进度
+
+    implementation 'com.qiniu:happy-dns:0.2.5'      // 七牛库
+    implementation 'com.qiniu:qiniu-android-sdk:7.3.1'
+
+    compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-14' //下拉刷新，上拉加载
+    compile 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-14'//没有使用特殊Header，可以不加这行
+    compile 'q.rorbin:badgeview:1.1.3'  //购物车角标
+
+    compile 'com.flipboard:bottomsheet-core:1.5.3'      //底部弹出
+    compile 'com.flipboard:bottomsheet-commons:1.5.3' // optional
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.30' //一个强大的RecyclerAdapter框架
+    compile 'com.github.jlcclidong:AddCartAniamtion:v3.0'    //仿美团外卖添加商品的抛物线动画
+
+    compile 'com.alibaba:fastjson:1.2.51'       //json工具
+    //compile 'com.payelves:sdk-release:3.3.0'    //支付精灵
+
+    compile(name: 'alipaySdk-15.5.9-20181123210601', ext: 'aar') //支付宝
+
+    compile 'com.android.support:multidex:1.0.1'
+
+}
+// 解决support-annotations版本冲突
+configurations.all {
+    resolutionStrategy.force 'com.android.support:support-annotations:27.1.1'
+}
+// 添加mob插件
+apply plugin: "com.mob.sdk"
+
+// 在MobSDK的扩展中注册SMSSDK的相关信息
+MobSDK {
+    appKey "25c75de708c74"
+    appSecret "d37a72d6c2b8c57ffbd45401a1f63f9e"
+
+    SMSSDK {}
+}
+
+/*错误1*/
+//Error:Execution failed for task ':app:javaPreCompileDebug'.
+//        > Annotation processors must be explicitly declared now.  The following dependencies on the compile classpath are found to contain annotation processor.  Please add them to the annotationProcessor configuration.
+//        - compiler-4.0.0-RC0.jar (com.github.bumptech.glide:compiler:4.0.0-RC0)
+//Alternatively, set android.defaultConfig.javaCompileOptions.annotationProcessorOptions.includeCompileClasspath = true to continue with previous behavior.  Note that this option is deprecated and will be removed in the future.
+//        See https://developer.android.com/r/tools/annotation-processor-error-message.html for more details.

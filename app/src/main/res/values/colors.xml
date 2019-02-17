@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="txtBlack">#000000</color>
+
+    <!--首页底部导航颜色-->
+    <color name="logoOrange">#EEB134</color>
+    <color name="txtGray">#2d2d2d </color>
+    <color name="homeBg">#F5F5F5</color>
+
+    <!--发现页面-->
+    <color name="findBg">#F3F3F3</color>
+
+    <!--我的页面-->
+    <color name="mineGradientBegin">#E8751A</color>
+    <color name="mineGradientEnd">#F4B91A</color>
+
+    <!--登录错误提示-->
+    <color name="loginErrorMsg">#55000000</color>
+
+
+    <!--登录按钮-->
+    <color name="loginBtnEnabledFalse">#77EEB134</color>
+    <!--分类分割线-->
+    <color name="classifyView">#F5F5F5</color>
+    <color name="black">#33000000</color>
+    <!--搜索框背景-->
+    <color name="search_corner_bg">#ffffff</color>
+    <color name="search_corner_bg_changed">#D8D8D8</color>
+    <color name="search_bg">#9B9B9B</color>
+    <color name="ic_text_changed">#464A54</color>
+    
+    <!--个人信息-->
+    <color name="person_info_bg">#F6F6F6</color>
+    <color name="person_text_left">#2D2D2D</color>
+    <color name="person_text_right">#848484</color>
+
+    <!--商品推荐列表-->
+    <color name="product_list_txt_title">#333333</color>
+    <color name="product_list_txt_content">#666666</color>
+    <color name="product_list_txt_level">#D81E06</color>
+
+    <!--透明-->
+     <color name="transparent">#00000000</color>
+
+    <!--店铺-->
+    <!--分类-->
+    <color name="shop_classify_text_unselected">#666666</color>
+    <color name="shop_classify_text_selected">#000000</color>
+    <!--店铺- 购物车结算-->
+    <color name="shop_cart_settlement">#FF9900</color>
+    <color name="shop_cart_counts">#EEB134</color>
+
+    <color name="shop_classify_background_selected">#FFFFFF</color>
+    <color name="shop_classify_background_unselected">#F4F4F4</color>
+
+    <!--搜索历史-->
+    <color name="search_history_bg">#F4F4F4</color>
+
+
+</resources>

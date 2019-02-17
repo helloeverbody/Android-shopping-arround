@@ -1,0 +1,139 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/homeBg">
+
+
+
+
+
+    <com.cjj.MaterialRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/refresh_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:wave_height_type="normal"
+        tools:context="com.example.jju.huizhen.fragement.HomeFragment">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_home_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/homeBg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!--轮播图-->
+                    <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/banner_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        app:indicator_drawable_selected="@drawable/indicator_roun_rect_selected"
+                        app:indicator_drawable_unselected="@drawable/indicator_roun_rect_normal"
+                        app:indicator_width="10dp"
+                        app:indicator_height="5dp"
+                        app:image_scale_type="fit_xy"
+                        app:banner_layout="@layout/banner"/>
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:background="@drawable/shape_gradient2"
+                        android:layout_marginTop="170dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:orientation="vertical"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginTop="170dp">
+
+                        <jju.example.com.xgg.view.MyGridView
+                            android:id="@+id/gv_home"
+                            android:listSelector="@android:color/transparent"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_corner"
+                            android:horizontalSpacing="2dp"
+                            android:numColumns="2"
+                            android:verticalSpacing="2dp" />
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--新鲜水果-->
+                <RelativeLayout
+                    android:layout_margin="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp">
+                    <ImageView
+                        android:id="@+id/iv_home_fruit"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+                    <View
+                        android:layout_width="260dp"
+                        android:layout_height="80dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/shape_home_fruit_side" />
+                    <TextView
+                        android:layout_width="250dp"
+                        android:layout_height="70dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:background="#e0ffffff"
+                        android:text="购物广场"
+                        android:textColor="#000000"/>
+                </RelativeLayout>
+                <!--水果列表——Grid-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="0dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:descendantFocusability="blocksDescendants">
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_product_list_grid_home"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never"/>
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+    </com.cjj.MaterialRefreshLayout>
+    <LinearLayout
+        android:id="@+id/llStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/shape_gradient"
+        android:orientation="vertical"
+        android:visibility="visible"/>
+    <jju.example.com.xgg.view.HomeSearbar
+        android:id="@+id/home_search_bar"
+        android:layout_below="@+id/llStatusbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

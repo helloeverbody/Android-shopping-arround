@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="jju.example.com.xgg.activity.MainActivity"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/fl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rg_navigation"/>
+    <View
+        android:id="@+id/view_split"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#CBCBCB"
+        android:layout_above="@id/rg_navigation"/>
+
+    <RadioGroup
+
+        android:id="@+id/rg_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@color/white"
+        android:layout_alignParentBottom="true">
+
+        <RadioButton
+            android:id="@+id/rb_home"
+            style="@style/btn_index_navigation"
+            android:checked="true"
+            android:text="首页"
+            android:drawableTop="@drawable/ic_home_selector"/>
+        <RadioButton
+            android:id="@+id/rb_classify"
+            style="@style/btn_index_navigation"
+            android:text="附近"
+            android:drawableTop="@drawable/ic_classify_selector"/>
+        <RadioButton
+            android:id="@+id/rb_find"
+            style="@style/btn_index_navigation"
+            android:text="发现"
+            android:drawableTop="@drawable/ic_find_selector"/>
+        <RadioButton
+            android:id="@+id/rb_shopping_cart"
+            style="@style/btn_index_navigation"
+            android:text="订单"
+            android:drawableTop="@drawable/ic_shopping_cart_selector"/>
+        <RadioButton
+            android:id="@+id/rb_mine"
+            style="@style/btn_index_navigation"
+            android:text="我的"
+            android:drawableTop="@drawable/ic_mine_selector"/>
+
+    </RadioGroup>
+
+
+</RelativeLayout>

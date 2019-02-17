@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:orientation="horizontal"
+    android:background="@color/white">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@drawable/item_shop_product">
+        <ImageView
+            android:id="@+id/ispl_iv_shop_head"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="0.1dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/item_fruit"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <!--店名-->
+                <TextView
+                    android:id="@+id/ispl_tv_shop_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/product_list_txt_title"
+                    android:text="果缤纷水果店"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="horizontal">
+
+                <!--月售-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/product_list_txt_content"
+                    android:textSize="10sp"
+                    android:text="月售176"/>
+                <!--起送-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/product_list_txt_content"
+                    android:textSize="10sp"
+                    android:text="起送￥20"/>
+                <!--配送-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/product_list_txt_content"
+                    android:textSize="10sp"
+                    android:text="免配送费"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/ispl_rv_product"
+            android:overScrollMode="never"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:id="@+id/ispl_ll_more"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/product_list_txt_content"
+                android:textSize="10sp"
+                android:text="查看其余"/>
+            <TextView
+                android:id="@+id/ispl_tv_more_product_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/product_list_txt_content"
+                android:textSize="10sp"
+                android:text="3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/product_list_txt_content"
+                android:textSize="10sp"
+                android:text="个商品"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_more"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/ispl_ll_less"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="5dp"
+                android:textColor="@color/product_list_txt_content"
+                android:textSize="10sp"
+                android:text="收起"/>
+            <ImageView
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_less"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

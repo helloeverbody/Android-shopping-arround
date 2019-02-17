@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="4dp"
+    android:background="@color/shop_classify_background_selected">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/item_shop_product">
+            <ImageView
+                android:id="@+id/isp_iv_product_head"
+                android:layout_width="110dp"
+                android:layout_height="82dp"
+                android:layout_margin="0.1dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/img_product1"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/isp_tv_product_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/product_list_txt_title"
+            android:textSize="10sp"
+            android:text="新鲜香蕉"/>
+
+        <TextView
+            android:id="@+id/isp_tv_product_month_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:textColor="@color/product_list_txt_content"
+            android:textSize="8sp"
+            android:text="月售120"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/material_red"
+                android:textSize="10sp"
+                android:text="￥"/>
+            <TextView
+                android:id="@+id/isp_tv_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/material_red"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="7.9"/>
+
+            <ImageView
+                android:id="@+id/isp_iv_add"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:padding="1dp"
+                android:layout_marginBottom="2dp"
+                android:src="@drawable/ic_add_to_cart"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

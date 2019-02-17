@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_alignParentTop="true">
+
+
+
+    <LinearLayout
+        android:id="@+id/home_search_bar_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/home_search_bar_left_bg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:background="@drawable/shape_circle"
+            android:orientation="vertical"
+            android:paddingTop="4dp">
+
+            <ImageView
+                android:id="@+id/home_search_bar_scan"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search_scan_" />
+
+            <TextView
+                android:id="@+id/home_search_bar_scan_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="扫啊扫"
+                android:textSize="10sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_search_bar_textView"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="3px"
+            android:layout_marginRight="3px"
+            android:layout_weight="1"
+            android:background="@drawable/home_title_bar_search_corner_bg"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/home_search_bar_search"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_search" />
+
+            <TextView
+                android:id="@+id/home_search_bar_text"
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:lines="1"
+                android:text="@string/search"
+                android:textColor="@color/search_bg"
+                android:textSize="15dp" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginRight="5dp"-->
+                <!--android:src="@drawable/root" />-->
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_search_bar_right_bg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:background="@drawable/shape_circle"
+            android:paddingTop="4dp">
+
+            <ImageView
+                android:id="@+id/home_search_bar_msg"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_search_msg" />
+
+            <TextView
+                android:id="@+id/home_search_bar_msg_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="消息"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

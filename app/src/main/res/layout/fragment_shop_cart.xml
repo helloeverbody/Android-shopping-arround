@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="jju.example.com.xgg.fragment.ShopCartFragment"
+    android:background="@color/white">
+
+    <jju.example.com.xgg.view.MyStatusBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <com.cjj.MaterialRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/refresh_shopping_cart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:wave_height_type="normal"
+        tools:context="com.example.jju.huizhen.fragement.HomeFragment">
+
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nsv_shopping_cart_fragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp"
+                    android:background="@color/white">
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="购物车"
+                        android:textColor="@color/logoOrange"
+                        android:textSize="18sp"
+                        android:layout_gravity="center"/>
+                    <View
+                        android:layout_width="52dp"
+                        android:layout_height="2dp"
+                        android:background="@color/logoOrange"
+                        android:layout_gravity="center"/>
+
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_cart_list_shopping_cart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/findBg"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="6dp"
+                        android:src="@drawable/ic_shopping_cart_recommend" />
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_product_list_shopping_cart"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </com.cjj.MaterialRefreshLayout>
+    
+
+
+
+</LinearLayout>

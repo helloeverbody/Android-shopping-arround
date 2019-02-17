@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">XGG</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="fruit">新鲜水果\n果香四溢</string>
+    <string name="search">新鲜水果</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="shop_notice_compress">公告：近日天气较为恶劣，配送难度较大，配送压力也比较…</string>
+    <string name="shop_notice">公告：近日天气较为恶劣，配送难度较大，配送压力也比较大，望下单每一位亲们多多体谅骑手，我们也会尽可能加快骑手配送效率。如有延误的请及时与商家联系。</string>
+
+</resources>
